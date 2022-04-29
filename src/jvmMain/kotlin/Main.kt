@@ -18,7 +18,7 @@ fun App() {
 
     MaterialTheme {
         Button(onClick = {
-            text = "Hello, Luna!"
+            text = "Hello, Luna-md!"
         }) {
             Text(text)
         }
