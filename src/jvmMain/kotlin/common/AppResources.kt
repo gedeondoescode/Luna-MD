@@ -16,6 +16,8 @@ val LocalAppResources = staticCompositionLocalOf <AppResources> {
     error("LocalLunaResources isn't available")
 }
 
+// Application Icons
+//TODO: FIND A BETTER ICON THAN "LIST" THIS IS GARBAGE
 @Composable
 fun rememberAppResources(): AppResources {
     val icon = rememberVectorPainter(Icons.Filled.List, tintColor = Color(0xFF2CA4E1))
@@ -24,6 +26,7 @@ fun rememberAppResources(): AppResources {
 
 class AppResources(val icon: VectorPainter)
 
+// image and tinting props
 @Composable
 fun rememberVectorPainter(image: ImageVector, tintColor: Color) =
     rememberVectorPainter(
