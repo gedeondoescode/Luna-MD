@@ -1,13 +1,8 @@
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import os.HomeFolder
+import androidx.compose.ui.window.application
+import androidx.compose.ui.window.Window
 
-@Composable
-fun MainView() {
-    val lunaView = remember {
+fun main() = application {
+    Window(onCloseRequest = ::exitApplication) {
 
-        LunaView(
-            fileView = FileView(HomeFolder)
-        )
     }
 }
