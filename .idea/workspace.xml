@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c74214e-77f1-4f94-8dd6-b9c52cfb2123" name="Changes" comment="let's bring .idea back">
+    <list default="true" id="0c74214e-77f1-4f94-8dd6-b9c52cfb2123" name="Changes" comment="Add settings with system tray function">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LunaAppState.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/LunaApplication.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/LunaAppState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaDocWindow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/common/AppRes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaMainWindow.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaWindowState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/util/Settings.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/editor/DocEditor.kt" beforeDir="false" />
@@ -59,8 +59,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -211,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651492216151</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add settings with system tray function">
+      <created>1651501421344</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1651501421344</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +256,7 @@
     <MESSAGE value="Implement text selection" />
     <MESSAGE value="so we made a window..." />
     <MESSAGE value="let's bring .idea back" />
-    <option name="LAST_COMMIT_MESSAGE" value="let's bring .idea back" />
+    <MESSAGE value="Add settings with system tray function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add settings with system tray function" />
   </component>
 </project>
