@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c74214e-77f1-4f94-8dd6-b9c52cfb2123" name="Changes" comment="Add settings with system tray function">
+    <list default="true" id="0c74214e-77f1-4f94-8dd6-b9c52cfb2123" name="Changes" comment="commit .idea stuff">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/LunaAppState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LunaApplication.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/common/AppRes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaMainWindow.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaWindowState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/util/Dialog.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/editor/DocEditor.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/os/File.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/os/Resources.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaWindowState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaWindowState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/util/SingleSelection.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/util/TextLines.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +60,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -218,7 +219,42 @@
       <option name="project" value="LOCAL" />
       <updated>1651501421344</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="throw in some icon stuff">
+      <created>1651529268957</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1651529268957</updated>
+    </task>
+    <task id="LOCAL-00014" summary="create the main window and the window's state">
+      <created>1651529304756</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1651529304756</updated>
+    </task>
+    <task id="LOCAL-00015" summary="get rid of this thing">
+      <created>1651529331757</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1651529331757</updated>
+    </task>
+    <task id="LOCAL-00016" summary="create main file for all current and future windows">
+      <created>1651529374118</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1651529374118</updated>
+    </task>
+    <task id="LOCAL-00017" summary="commit .idea stuff">
+      <created>1651529390538</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1651529390538</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,6 +293,11 @@
     <MESSAGE value="so we made a window..." />
     <MESSAGE value="let's bring .idea back" />
     <MESSAGE value="Add settings with system tray function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add settings with system tray function" />
+    <MESSAGE value="throw in some icon stuff" />
+    <MESSAGE value="create the main window and the window's state" />
+    <MESSAGE value="get rid of this thing" />
+    <MESSAGE value="create main file for all current and future windows" />
+    <MESSAGE value="commit .idea stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit .idea stuff" />
   </component>
 </project>

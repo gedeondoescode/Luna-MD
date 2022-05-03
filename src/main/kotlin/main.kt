@@ -1,8 +1,10 @@
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.window.application
-import androidx.compose.ui.window.Window
+import ui.common.LocalAppRes
+import ui.common.rememberAppRes
 
 fun main() = application {
-    Window(onCloseRequest = ::exitApplication) {
-
+    CompositionLocalProvider(LocalAppRes provides rememberAppRes()) {
+        LunaApplication(rememberApplicationState())
     }
 }
