@@ -61,10 +61,28 @@ fun LunaMainWindow(state: LunaWindowState) {
     }
 }
 
+
 private fun titleOf(state: LunaWindowState): String {
     val changeMark = if (state.isChanged) "*" else ""
     val filePath = state.path ?: "Untitled"
     return "$changeMark$filePath - Luna-MD"
+}
+
+@Composable
+private fun WindowNotifications(state: LunaWindowState) {
+    fun LunaWindowNotification.format() = when (this) {
+        is LunaWindowNotification.SaveSuccess -> Notification(
+            "Successfully saved!", path.toString(), Notification.Type.Info
+        )
+        is LunaWindowNotification.SaveError -> Notification(
+            "File isn't saved", path.toString(), Notification.Type.Error
+        )
+    }
+    LaunchedEffect(Unit) {
+        state.notifications.collect {
+            state.sendNotification(it.format())
+        }
+    }
 }
 
 @Composable
