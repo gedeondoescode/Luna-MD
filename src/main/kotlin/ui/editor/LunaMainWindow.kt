@@ -10,6 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.*
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import util.ExitDialog
+import util.FileDialog
 
 @Composable
 fun LunaMainWindow(state: LunaWindowState) {
@@ -34,6 +36,28 @@ fun LunaMainWindow(state: LunaWindowState) {
         )
 
         //todo: we'll come back around to add some prompts for saving and exiting
+        if (state.openDialog.isAwaiting) {
+            FileDialog(
+                title = "Luna-MD",
+                isLoad = true,
+                onResult = { state.openDialog.onResult(it) }
+            )
+        }
+        if (state.saveDialog.isAwaiting) {
+            FileDialog(
+                title = "Luna-MD",
+                isLoad = true,
+                onResult = { state.saveDialog.onResult(it) }
+            )
+        }
+        if (state.exitDialog.isAwaiting) {
+            ExitDialog(
+                title = "Luna-MD",
+                message = "Save changes?",
+                onResult = { state.exitDialog.onResult(it) }
+
+            )
+        }
     }
 }
 

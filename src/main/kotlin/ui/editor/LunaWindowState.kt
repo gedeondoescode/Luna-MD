@@ -6,6 +6,9 @@ import androidx.compose.runtime.setValue
 // import androidx.compose.ui.window.WindowPlacement
 import androidx.compose.ui.window.WindowState
 import kotlinx.coroutines.*
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.receiveAsFlow
 import util.AlertDialogResult
 import util.Settings
 import java.nio.file.Path
@@ -28,6 +31,9 @@ class LunaWindowState (
     val openDialog = DialogState<Path?>()
     val saveDialog = DialogState<Path?>()
     val exitDialog = DialogState<AlertDialogResult>()
+
+    private var _notifications = Channel<LunaWindowNotification>(0)
+    val notifications: Flow<LunaWindowNotification> get() = _notifications.receiveAsFlow()
 
     //todo: set notifications for Luna (i.e. request access to read and edit)
 
@@ -116,6 +122,15 @@ class LunaWindowState (
 
         saveJob?.cancel()
         saveJob = path.launchSaving(text)
+
+        try {
+            saveJob?.join()
+            _notifications.trySend(LunaWindowNotification.SaveSuccess(path))
+        } catch (e: Exception) {
+            isChanged = true
+            e.printStackTrace()
+            _notifications.trySend(LunaWindowNotification.SaveError(path))
+        }
     }
 
     suspend fun exit(): Boolean {
@@ -157,6 +172,11 @@ private suspend fun Path.writeTextAsync(text: String) = withContext(Dispatchers.
 
 private suspend fun Path.readTextAsync() = withContext(Dispatchers.IO) {
     toFile().readText()
+}
+
+sealed class LunaWindowNotification {
+    class SaveSuccess(val path: Path) : LunaWindowNotification()
+    class SaveError(val path: Path) : LunaWindowNotification()
 }
 
 class DialogState<T> {
