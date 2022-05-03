@@ -46,7 +46,7 @@ fun LunaMainWindow(state: LunaWindowState) {
         if (state.saveDialog.isAwaiting) {
             FileDialog(
                 title = "Luna-MD",
-                isLoad = true,
+                isLoad = false,
                 onResult = { state.saveDialog.onResult(it) }
             )
         }
@@ -92,6 +92,7 @@ private fun FrameWindowScope.WindowMenuBar(state: LunaWindowState) = MenuBar {
     fun open() = scope.launch { state.open() }
     fun exit() = scope.launch { state.exit() }
 
+    // We might have to move to this into its own file at some point
     Menu("File") {
         Item("New Window", onClick = state::newWindow)
         Item("Open", onClick = { open() })
