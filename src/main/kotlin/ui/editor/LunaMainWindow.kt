@@ -10,7 +10,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.*
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import java.awt.Frame
 
 @Composable
 fun LunaMainWindow(state: LunaWindowState) {
