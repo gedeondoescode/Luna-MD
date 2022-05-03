@@ -88,11 +88,15 @@ private fun WindowNotifications(state: LunaWindowState) {
 @Composable
 private fun FrameWindowScope.WindowMenuBar(state: LunaWindowState) = MenuBar {
     val scope = rememberCoroutineScope()
-
+    fun save() = scope.launch { state.save() }
+    fun open() = scope.launch { state.open() }
     fun exit() = scope.launch { state.exit() }
 
     Menu("File") {
         Item("New Window", onClick = state::newWindow)
+        Item("Open", onClick = { open() })
+        Item("Save", onClick = { save() }, enabled = state.isChanged || state.path == null)
+        Separator()
         Item("Exit", onClick = { exit() })
     }
 }
