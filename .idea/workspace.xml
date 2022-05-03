@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c74214e-77f1-4f94-8dd6-b9c52cfb2123" name="Changes" comment="commit .idea stuff">
+    <list default="true" id="0c74214e-77f1-4f94-8dd6-b9c52cfb2123" name="Changes" comment="Implement dialog states for saving and exiting">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaMainWindow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaMainWindow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaWindowState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaWindowState.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +248,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651529390538</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="removed java.awt.Frame from LunaMainWindow.kt">
+      <created>1651576843893</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1651576843893</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Implement dialog states for saving and exiting">
+      <created>1651578354954</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1651578354954</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,6 +306,8 @@
     <MESSAGE value="get rid of this thing" />
     <MESSAGE value="create main file for all current and future windows" />
     <MESSAGE value="commit .idea stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit .idea stuff" />
+    <MESSAGE value="removed java.awt.Frame from LunaMainWindow.kt" />
+    <MESSAGE value="Implement dialog states for saving and exiting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement dialog states for saving and exiting" />
   </component>
 </project>
