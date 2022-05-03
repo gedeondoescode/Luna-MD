@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c74214e-77f1-4f94-8dd6-b9c52cfb2123" name="Changes" comment="commit .idea stuff">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LunaAppState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/util/Dialog.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/os/File.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/os/Resources.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaWindowState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaWindowState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/util/SingleSelection.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/util/TextLines.kt" beforeDir="false" />
-    </list>
+    <list default="true" id="0c74214e-77f1-4f94-8dd6-b9c52cfb2123" name="Changes" comment="commit .idea stuff" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
