@@ -1,16 +1,18 @@
 package ui.editor
+import LunaAppState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.window.WindowPlacement
+// import androidx.compose.ui.window.WindowPlacement
 import androidx.compose.ui.window.WindowState
 import kotlinx.coroutines.*
+import util.AlertDialogResult
 import util.Settings
 import java.nio.file.Path
 
 
 class LunaWindowState (
-        private val application: LunaWindowState,
+        private val application: LunaAppState,
         path: Path?,
         private val exit: (LunaWindowState) -> Unit
 ) {
@@ -22,6 +24,10 @@ class LunaWindowState (
 
     var isChanged by mutableStateOf(false)
         private set
+
+    val openDialog = DialogState<Path?>()
+    val saveDialog = DialogState<Path?>()
+    val exitDialog = DialogState<AlertDialogResult>()
 
     //todo: set notifications for Luna (i.e. request access to read and edit)
 
@@ -78,8 +84,65 @@ class LunaWindowState (
         application.newWindow()
     }
 
+    suspend fun open() {
+        if(askToSave()) {
+            val path = openDialog.awaitResult()
+            if (path != null) {
+                open(path)
+            }
+        }
+    }
+
+    suspend fun save(): Boolean {
+        check(isInit)
+        if (path == null) {
+            val path = saveDialog.awaitResult()
+            if (path != null) {
+                save(path)
+                return true
+            }
+        } else {
+            save(path!!)
+            return true
+        }
+        return false
+    }
+
+    private var saveJob: Job? = null
+
+    private suspend fun save(path: Path) {
+        isChanged = false
+        this.path = path
+
+        saveJob?.cancel()
+        saveJob = path.launchSaving(text)
+    }
+
     suspend fun exit(): Boolean {
-        return true
+        return if (askToSave()) {
+            exit(this)
+            true
+        } else {
+            false
+        }
+    }
+    private suspend fun askToSave(): Boolean {
+        if (isChanged) {
+            when (exitDialog.awaitResult()) {
+                AlertDialogResult.Yes -> {
+                    if (save()) {
+                        return true
+                    }
+                }
+                AlertDialogResult.No -> {
+                    return true
+                }
+                AlertDialogResult.Cancel -> return false
+            }
+        } else {
+            return true
+        }
+        return false
     }
 }
 
@@ -94,4 +157,18 @@ private suspend fun Path.writeTextAsync(text: String) = withContext(Dispatchers.
 
 private suspend fun Path.readTextAsync() = withContext(Dispatchers.IO) {
     toFile().readText()
+}
+
+class DialogState<T> {
+    private var onResult: CompletableDeferred<T>? by mutableStateOf(null)
+
+    val isAwaiting get() = onResult != null
+
+    suspend fun awaitResult(): T {
+        onResult = CompletableDeferred()
+        val result = onResult!!.await()
+        onResult = null
+        return result
+    }
+    fun onResult(result: T) = onResult!!.complete(result)
 }
