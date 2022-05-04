@@ -44,7 +44,7 @@ class LunaWindowState (
         get() = _text
         set(value) {
             check(isInit)
-            _text = value
+            _text = value.replace("\t", "    ") // temp fix. barely works. https://github.com/JetBrains/compose-jb/issues/615
             isChanged = true
         }
     var isInit by mutableStateOf(false)

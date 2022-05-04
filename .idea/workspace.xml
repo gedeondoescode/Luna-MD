@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c74214e-77f1-4f94-8dd6-b9c52cfb2123" name="Changes" comment="Implement dialog states for saving and exiting">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaMainWindow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaMainWindow.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaWindowState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/editor/LunaWindowState.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
