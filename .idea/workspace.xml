@@ -4,7 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c74214e-77f1-4f94-8dd6-b9c52cfb2123" name="Changes" comment="Should actually save the file instead of loading it" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +55,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -280,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651578354954</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update pulls">
+      <created>1651932341045</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1651932341045</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,6 +337,7 @@
     <MESSAGE value="commit .idea stuff" />
     <MESSAGE value="removed java.awt.Frame from LunaMainWindow.kt" />
     <MESSAGE value="Implement dialog states for saving and exiting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement dialog states for saving and exiting" />
+    <MESSAGE value="update pulls" />
+    <option name="LAST_COMMIT_MESSAGE" value="update pulls" />
   </component>
 </project>
